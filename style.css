@@ -38,16 +38,17 @@ section {
   top: 0%;
   left: 0%;
   width: 100%;
-  padding: 2rem 9%;
+  padding: 1rem;
   background: var(--bg-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100%;
+  z-index: 100;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+  padding-right:rem;
   color: var(--text-color);
   font-weight: 600;
   cursor: default;
@@ -56,17 +57,16 @@ section {
 .navBar a {
   font-size: 1.7rem;
   color: var(--text-color);
-  margin-left: 4rem;
+  margin-left: 2rem;
   transition: 0.3s;
 }
 
-.navBar a:hover,
-.navBar a.active {
+.navBar a:hover{
   color: var(--main-color);
 }
 
 #menu-icon {
-  font-size: 3, 6rem;
+  font-size: 3rem;
   color: var(--text-color);
   display: none;
 }
@@ -75,6 +75,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 3rem;
 }
 
 .home-img img {
@@ -112,17 +113,16 @@ span {
   height: 4rem;
   background: transparent;
   border: 0.2rem solid var(--main-color);
+  box-shadow: 0 0 1rem var(--main-color);
   border-radius: 50%;
   font: 2rem;
   color: var(--main-color);
   margin: 3rem 1.5rem 3rem 0;
-  transition: 5s ease;
+  transition: .5s ease;
 }
 
 .social-media a:hover {
-  background: var(--main-color);
-  color: var(--second-bg-color);
-  box-shadow: 0 0 1rem var(--main-color);
+  box-shadow: none;
 }
 
 .btn {
@@ -144,14 +144,13 @@ span {
 
 .about {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 2rem;
   background: var(--second-bg-color);
+  padding: 5rem;
 }
 
 .about-img {
-  width: 35vw;
+  width: 25vw;
 }
 
 .heading {
@@ -173,8 +172,21 @@ span {
     margin: 2rem 0 3rem;
 }
 
+.services {
+  align-items: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.servicesgrid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
 .services h2{
-    margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .servicesgrid{
@@ -190,41 +202,62 @@ span {
 }
 
 .services-container .services-box{
-    flex: 1 1 30rem;
-    background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 4rem;
-    text-align: center;
-    border: .2rem solid var(--main-color);
-    transition: 0.5 ease;
+  max-width: 18rem;
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 4rem;
+  text-align: center;
+  border: .2rem solid var(--main-color);
+  transition: .5s ease;
 }
 
 .services-container .services-box:hover{
-    border-color: var(--main-color);
-    transform: scale(1.1);
-
+  border-color: var(--main-color);
+  transform: scale(1.1);
 }
 
 .services-box i{
-    font-size: 7rem;
-    color: var(--main-color);
+  font-size: 7rem;
+  color: var(--main-color);
 }
 
 .services-box h3{
-    font-size: 2.6rem;
+  font-size: 2rem;
 }
 
 .services-box p{
-    font-size: 1.2rem;
-    margin: 1rem 0 3rem;    
+  font-size: 1.2rem;
+  margin: 1rem 0 3rem;    
+}
+
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+    box-shadow: none; /* Removido box-shadow */
+}
+
+.footer-iconTop a:hover {
+    box-shadow: none; /* Mantido box-shadow como 'none' no hover */
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
 }
 
 .portifolio{
   background: var(--second-bg-color);
+  padding: 3rem;
 }
 
 .portifolio h2{
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .portifolio-container{
@@ -248,14 +281,14 @@ span {
 
 .portifolio-box:hover img{
 transform: scale(1.1);
-transform: .5s ease;
+transition: .5s ease;
 }
 
 .portifolio-box .portifolio-layer{
   position: absolute;
   bottom: 0;
   left: 0;
-  white-space: 100%;
+  white-space: 5em;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, .1),var(--main-color));
   display: flex;
@@ -296,13 +329,16 @@ transform: .5s ease;
   color: var(--second-bg-color);
 }
 
+.contact{
+  margin-top: 2rem;
+  padding: 3rem;
+}
 .contact h2{
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .contact form{
   max-width: 70rem;
-  margin: 1rem auto;
   text-align: center;
   margin-bottom: 3rem;
 }
@@ -333,6 +369,8 @@ transform: .5s ease;
 }
 
 .contact form .btn{
+  width: 20rem;
+  font-size: 1.6rem;
   margin-top: 2rem;
   cursor: pointer;
 }
@@ -342,7 +380,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 9%;
+  padding: 2rem;
   background: var(--second-bg-color);
 }
 
@@ -350,7 +388,7 @@ footer{
   font-size: 1.6rem;
 }
 
-.footer-iconTop a{
+.footer-iconTop a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -358,13 +396,14 @@ footer{
   background: var(--main-color);
   border-radius: .8rem;
   transition: .5s ease;
+  box-shadow: 0 0 1rem var(--main-color); /* Adicionado box-shadow aqui */
 }
 
-.footer-iconTop a:hover{
-  box-shadow: 0 0 1rem var(--main-color);
+.footer-iconTop a:hover {
+  box-shadow: none; /* A sombra é removida no hover */
 }
 
-.footer-iconTop a i{
+.footer-iconTop a i {
   font-size: 2.4rem;
   color: var(--second-bg-color);
 }
